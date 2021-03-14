@@ -9,6 +9,8 @@
 ## Overview of Project
 The customer's parents had solely invested in DAQO New Energy Corp, a company that makes silicon wafers for solar panels.  The customer believes that his parents should diversify their investments and has asked for help analyzing 2017 and 2018 stock data in order to evaluate DAQO (ticker symbol DQ) and other green energy stocks.  Using VBA macros, the Total Daily Volume and Return were calculated for each stock for the years 2017 and 2018.
 
+For ease of use, buttons were provided to clear the page and then run the analysis with a prompt for the year.  
+
 The macros were coded twice, in different ways, in order to demonstrate refactoring and the difference in run time.
 
 (Data set and premise from BootCamp Module 2 Challenge: https://courses.bootcampspot.com/courses)
@@ -17,11 +19,10 @@ The macros were coded twice, in different ways, in order to demonstrate refactor
 
 ### Analysis
 Over three thousand rows of data per year were compiled.  Total Daily Volume and Return were calculated for each ticker for each year.  The output was formatted to show gains in green and losses in red.
-The side by side comparison below shows the results from two years of data.
+
+The side by side comparison below shows the results from two years of data.  DQ performed well in 2017 but suffered huge losses in 2018.  ENPH and RUN were the only two stocks with positive returns for both years with RUN making the most gains. 
 
 ![alt text](Resources_Mod2/2017_2018_Analyses.png)
-
-DQ performed well in 2017 but suffered huge losses in 2018.  ENPH and RUN were the only two stocks with positive returns for both years with RUN making the most gains. 
 
 https://www.mrexcel.com/board/threads/how-do-you-align-text-center-in-a-cell-using-vba.276160; https://docs.microsoft.com/en-us/office/vba/api/excel
 
@@ -65,5 +66,5 @@ When refactored, the data in *StockAnalysis Refactored* was compiled using multi
 <img src="Resources_Mod2/AllStocks2018.png" width="430" height="250">  <img src="Resources_Mod2/AllStocksRefactored2018.png" width="430" height="250">
 
 ## Summary
-* In general, refactoring has the advantage of optimizing code and possibly reducing run time.  The obvious disadvantage is that it requires additional thought and time, which leads to another advantage, which is learning new code.
-* For this particular exercise, refactoring cut the run times significantly although I do not trust the run time numbers for the original code.  It only took seconds to run the original code, but run time shows 57300 secs = 14.5 minutes. I learned a different way tackle the problem, but the disadvantage is that I spent a considerable amount of time trying to understand and solve the problem.  Unlike the nested lookes, the method using the arrays was not as intuitive.  
+* In general, refactoring has the advantage of optimizing code and possibly reducing run time.  The obvious disadvantage is that it requires additional thought and time that actually lead to another advantage, which is learning new code.
+* For this particular exercise, refactoring cut the run times significantly although I do not trust the run time numbers for the original code.  It only took seconds to run the original code, but run time shows 57300 secs = 14.5 minutes. I learned a different way tackle the problem, but the disadvantage is that I spent a considerable amount of time trying to understand and solve the problem.  Unlike the nested lookes, the method using the arrays was not as intuitive to me.  
