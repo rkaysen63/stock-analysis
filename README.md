@@ -63,6 +63,7 @@ When refactored, the *StockAnalysis Refactored* macro used multiple arrays rathe
         End If
     `Next i`
 * A final loop populated the output.     
+
 ### Comparison of Run Times - Original Code vs Refactored Code
 
 <img src="Resources_Mod2/AllStocks2017.png" width="400" height="250">  <img src="Resources_Mod2/AllStocksRefactored2017.png" width="400" height="250">
