@@ -43,10 +43,12 @@ To obtain the same final results, two macros were coded in different ways.  The 
           endingPrice = Cells(j, 6).Value
         End If
        Next j
-        
+
+Reference *StockAnalysis* macro, Module 3 ![VBA_Challenge](VBA_Challenge.xlsm)
+  
 ### Arrays
 
-When refactored, the *StockAnalysis Refactored* macro used multiple arrays rather than nested loops.  
+When refactored, the *StockAnalysisRefactored* macro used multiple arrays rather than nested loops.  
 * First a loop was created to loop through the tickerVolumes and set them to zero.  
 * A second loop was created to cycle through the arrays to calculate Ticker Volume and obtain the Starting and Ending Prices for each ticker by using a new variable called tickerIndex.  This loop ended by moving to the next ticker by increasing the tickerIndex.  
   `For i = 0 To 11; tickerVolumes(i) = 0; Next i`
@@ -63,6 +65,8 @@ When refactored, the *StockAnalysis Refactored* macro used multiple arrays rathe
         End If
     `Next i`
 * A final loop populated the output.     
+
+Reference *StockAnalysisRefactored* macro, Module 4 ![VBA_Challenge](VBA_Challenge.xlsm)
 
 ### Comparison of Run Times - Original Code vs Refactored Code
 
