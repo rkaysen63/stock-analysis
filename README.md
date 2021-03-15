@@ -30,9 +30,9 @@ https://www.mrexcel.com/board/threads/how-do-you-align-text-center-in-a-cell-usi
 ### Nested Loops
 To obtain the same final results, two macros were coded in different ways.  The first macro *StockAnalysis* (Module 3, VBA_Challenge.xlsm) used nested loops.  The outer loop initiated a particular ticker, set the total volume to zero and launched into the inner loop.  The inner loop circulated through a particular ticker in order to calculate Total Volume for that ticker and obtain its Starting and Ending Price.  Then the output cells were filled before moving on to the next ticker. At the next ticker, the process was repeated.
 
-   `For i = 0 To 11
-      ticker = tickers(i)
-      totalVolume = 0`
+   `For i = 0 To 11`
+      `ticker = tickers(i)`
+      `totalVolume = 0`
       
       For j = 2 To RowCount
        If Cells(j, 1).Value = ticker Then
@@ -47,7 +47,7 @@ To obtain the same final results, two macros were coded in different ways.  The 
        Next j
        
        'Output the date for the current ticker here.
-      `Next i`
+      Next i
 
 Reference *StockAnalysis* macro, Module 3 ![VBA_Challenge](VBA_Challenge.xlsm)
   
@@ -57,12 +57,12 @@ When refactored, the *StockAnalysisRefactored* macro (Module 4, VBA_Challenge.xl
 * First a loop was created to loop through the tickerVolumes and set them to zero.  
 * A second loop was created to cycle through the arrays to calculate Ticker Volume and obtain the Starting and Ending Prices for each ticker by using a new variable called tickerIndex.  This loop ended by moving to the next ticker by increasing the tickerIndex.  
    
-   `For i = 2 To RowCount
+   `For i = 2 To RowCount`
    `tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value`
         
         If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
           tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
-        End If`
+        End If
 
         If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
             tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
